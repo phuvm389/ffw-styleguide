@@ -1,0 +1,10 @@
+{
+  "site_title": "FFW Styleguide",
+  "img_path": "../images-demo/",
+  "list_components":[
+    {
+      "id":"example",
+      "name":"Example"
+    }
+  ]
+}
