@@ -7,6 +7,26 @@
   width: 1px !important;
 }
 
+.component--list--item .sub a {
+  padding-left: 20px;
+}
+
+.show-subitem {
+  font-weight: bold;
+  color: black;
+}
+
+.show-subitem:before {
+  content: "+";
+  margin-right: 5px;
+  line-height: 20px;
+}
+
+.show-subitem.active:before {
+  content: "-";
+  margin-right: 8px;
+}
+
 .component--list.active {
   left: 0;
 }
@@ -29,6 +49,7 @@
   border: 1px solid #ddd;
   box-shadow        : 0 1px 2px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  text-transform: capitalize;
 }
 .component--list .component--list--header{
   position: relative;
@@ -44,11 +65,10 @@
   position: absolute;
   width: 44px;
   height: 55px;
-  line-height: 55px;
-  -webkit-border-radius: 0 44px 44px 0;
-          border-radius: 0 44px 44px 0;
+  line-height: 45px;
+  border-radius: 0 8px 8px 0;
   font-size: 30px;
-  top: 0;
+  top: 40px;
   right: -44px;
   cursor: pointer;
   -webkit-transition: all 0.5s ease;
@@ -59,10 +79,10 @@
   text-align: center;
   z-index: 2;
   color: #FFF;
-  background: #007EA4;
+  background: #000;
 }
 .hide-list {
-  line-height: 55px;
+  line-height: 50px;
   background: #f5f5f5;
   color: #444444;
 }
@@ -100,18 +120,24 @@
   padding: 10px;
   background-color: #fff;
   border-bottom: 1px solid #d3d3d3;
+  cursor: pointer;
 }
 .component--list--item a:hover,
 .component--list--item a.active{
   background-color: #DDF0FF;
 }
+
+.component--list--item .sub a:hover,
+.component--list--item .sub a.active{
+  background-color: #F0F0F0;
+}
+
 .component--item {
   border: 1px solid #ddd;
   margin-bottom: 30px;
-          border-radius: 5px;
-  -webkit-border-radius: 5px;
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding-bottom: 10px;
 }
 
 .component--title {
@@ -127,16 +153,14 @@
   background: -webkit-linear-gradient(top,  #f5f5f5 0%,#e8e8e8 100%); /* Chrome10+,Safari5.1+ */
   background: linear-gradient(to bottom,  #f5f5f5 0%,#e8e8e8 100%); /* W3C */
   border-color: #ddd;
-  color: #333;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
-  font-weight: bold;
   padding: 10px 15px;
   text-align: center;
   text-transform: capitalize;
 }
 
 .component--demo {
-  padding: 15px;
+  padding: 15px 0;
 }
 
 .component--source--title {
@@ -147,6 +171,7 @@
 .show-code,
 .hide-code {
   cursor: pointer;
+  padding: 9px 5px 7px;
   font-size: 14px;
 }
 

@@ -28,19 +28,14 @@ So you got the prerequisites installed, and you're ready to get started? Great! 
     ```
     npm install
     ```
-5. Install all the Bower packages:
 
-    ```
-    bower install
-    ```
-
-6. For just compile style:
+5. For just compile style:
 
     ```
     gulp sass-dev
     ```
 
-7. Initialize the project with Gulp:
+6. Initialize the project with Gulp:
 
     ```
     gulp

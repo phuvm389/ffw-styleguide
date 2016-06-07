@@ -18,6 +18,7 @@ var gulp = require('gulp'),
     scss: '../scss/**/*.scss',
     css: '../css',
     html_components: '../styleguide/components/*.twig',
+    html_typo: '../styleguide/typography/*.twig',
     html_layouts: '../styleguide/layouts/*.twig',
     html_pages: '../styleguide/pages/*.twig',
     dataJson: '../styleguide/data/*.json',
@@ -34,7 +35,7 @@ gulp.task('local-development', ['sass-dev', 'styleguide'], function () {
   });
 
   gulp.watch(src.scss, ['sass-dev']);
-  gulp.watch([src.html_components, src.html_layouts, src.html_pages], ['styleguide']);
+  gulp.watch([src.html_components, src.html_typo, src.html_layouts, src.html_pages], ['styleguide']);
   gulp.watch(src.javascript, reload);
   gulp.watch(src.dataJson, ['styleguide', reload]);
 });

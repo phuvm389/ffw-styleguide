@@ -1,19 +1,4 @@
 (function (window, document, $) {
-  // $.getJSON("fonts/selection.json", function (data) {
-  //   var items = [];
-
-  //   $.each(data.icons, function (key, value) {
-  //     items.push('<li>' +
-  //       '<span class="icon_apeareance icon-' + value.properties.name + '"></span>' +
-  //       '<span class="icon-class-name">icon-' + value.properties.name + '</span>' +
-  //       '</li>');
-  //   });
-
-  //   $("<ul/>", {
-  //     "class": "icon-list",
-  //     html: items.join("")
-  //   }).appendTo($('#icons'));
-  // });
 
   //Show/hide code
   $(".show-code").click(function() {
@@ -27,8 +12,12 @@
   });
 
   //List components
-  $(".component--list--item a").click(function(){
-    $(".component--list--item a").removeClass("active");
+  $(".show-subitem").click(function(){
+    $(this).next().toggleClass("element-invisible");
+    $(this).toggleClass("active");
+  });
+  $(".sub").children('a').click(function(){
+    $(".sub").children('a').removeClass("active");
     $(this).addClass("active");
   });
   $(".show-list").click(function(){

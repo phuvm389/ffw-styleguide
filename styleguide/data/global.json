@@ -1,10 +1,49 @@
 {
   "site_title": "FFW Styleguide",
-  "img_path": "../images-demo/",
+  "img_path": "images-demo/",
+  "list_groups": [
+    {
+      "id":"basic",
+      "name": "Basic Elements"
+    },
+    {
+      "id":"helper",
+      "name":"Helper Classes"
+    },
+    {
+      "id":"component",
+      "name":"Components"
+    }
+  ],
   "list_components":[
     {
+      "id":"headings",
+      "group":"basic",
+      "hidecode":true
+    },
+    {
+      "id":"paragraphs",
+      "group":"basic"
+    },
+    {
+      "id":"links",
+      "group":"basic"
+    },
+    {
+      "id":"form",
+      "group":"basic"
+    },
+    {
+      "id":"background",
+      "group":"helper"
+    },
+    {
+      "id":"button",
+      "group":"helper"
+    },
+    {
       "id":"example",
-      "name":"Example"
+      "group":"component"
     }
   ]
 }
