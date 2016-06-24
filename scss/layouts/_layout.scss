@@ -4,11 +4,6 @@
 // This includes global styles for html, body, etc.
 
 @viewport{
-  zoom: 1;
-  width: extend-to-zoom;
-}
-
-@-ms-viewport{
   width: extend-to-zoom;
   zoom: 1;
 }
@@ -16,14 +11,16 @@
 //Enable font-smoothing
 html {
   @include helvetica;
-  font-size: $base-font-size; // Don't modify static unit.
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  color: $text-color;
+  font-size: $base-font-size; // Don't modify static unit.
   font-smoothing: antialiased;
   line-height: $base-line-height;
 }
 
 body {
   // Disable in production mode;
-  @include show-breakpoints;
+  // @include show-breakpoints;
+  text-size-adjust: none;
 }

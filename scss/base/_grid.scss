@@ -42,8 +42,8 @@ $susy-tablet: (
 $susy-desktop: (
   columns: $column-desktop,
   gutters: 36px / 62px,
-  container-position: rem($container-margin * 4),
-  container: auto,
+  container-position: auto,
+  container: rem($container-desktop),
   debug: (
     image: $show-image,
     color: rgba($silver, .25),

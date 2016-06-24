@@ -1,9 +1,9 @@
-#FFW Styleguide Template
+#Proofpoint Styleguide Template
 
 ##Getting started
 
 ###Prerequisites:
-The FFW Styleguide has a few dependencies that you will need to install to use it. Don't worry, we're got all the link you need right here:
+The Proofpoint Styleguide has a few dependencies that you will need to install to use it. Don't worry, we're got all the link you need right here:
 
 * [Node.js](https://nodejs.org/en/) – The backbone of the framework. Node Package Manager takes care of installing all the dev dependencies,
 * [Bower](http://bower.io/) – Bower manages all the front end packages and fetches them for, when we start a new project.
@@ -23,7 +23,7 @@ So you got the prerequisites installed, and you're ready to get started? Great! 
     cd .npm
     ```
 
-4. Install all the required packages with Node Package Manager
+4. Install all the required packages and libraries with Node Package Manager
 
     ```
     npm install
@@ -32,7 +32,7 @@ So you got the prerequisites installed, and you're ready to get started? Great! 
 5. For just compile style:
 
     ```
-    gulp sass-dev
+    gulp sass-prod
     ```
 
 6. Initialize the project with Gulp:

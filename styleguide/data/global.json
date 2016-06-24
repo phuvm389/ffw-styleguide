@@ -1,49 +1,52 @@
 {
-  "site_title": "FFW Styleguide",
+  "site_title": "FFWvn Styleguide",
   "img_path": "images-demo/",
+  "project_path":"https://propeople-us.atlassian.net/browse/",
   "list_groups": [
     {
-      "id":"basic",
-      "name": "Basic Elements"
+      "name":"basic",
+      "title": "Basic Elements"
     },
     {
-      "id":"helper",
-      "name":"Helper Classes"
+      "name":"helper",
+      "title":"Helper Classes"
     },
     {
-      "id":"component",
-      "name":"Components"
+      "name":"component",
+      "title":"Components"
     }
   ],
   "list_components":[
     {
-      "id":"headings",
+      "id":"ST-01",
+      "name":"headings",
       "group":"basic",
       "hidecode":true
     },
     {
-      "id":"paragraphs",
+      "id":"ST-02",
+      "name":"paragraphs",
       "group":"basic"
     },
     {
-      "id":"links",
+      "id":"ST-03",
+      "name":"links",
       "group":"basic"
     },
     {
-      "id":"form",
+      "id":"ST-04",
+      "name":"form",
       "group":"basic"
     },
     {
-      "id":"background",
+      "id":"ST-08",
+      "name":"background",
       "group":"helper"
     },
     {
-      "id":"button",
+      "id":"ST-09",
+      "name":"button",
       "group":"helper"
-    },
-    {
-      "id":"example",
-      "group":"component"
     }
   ]
 }
