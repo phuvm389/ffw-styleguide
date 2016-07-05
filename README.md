@@ -48,8 +48,11 @@ So you got the prerequisites installed, and you're ready to get started? Great! 
 
     ```
       {
-        "id":"component-name", // Same as file name.
-        "name": "Component Title"
+        "id":"taskId", // ID of taks on jira. (option)
+        "name":"component_name", // Same as file name. *require
+        "title": "Component Title", // Set title display for component. (option)
+        "group":"basic", // Group of component: basic/helper/component. *require
+        "hidecode":true // Hide showcode button. (option)
       }
    ```
 
