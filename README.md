@@ -1,9 +1,9 @@
-#Proofpoint Styleguide Template
+#FFW Styleguide Template
 
 ##Getting started
 
 ###Prerequisites:
-The Proofpoint Styleguide has a few dependencies that you will need to install to use it. Don't worry, we're got all the link you need right here:
+The FFW Styleguide has a few dependencies that you will need to install to use it. Don't worry, we're got all the link you need right here:
 
 * [Node.js](https://nodejs.org/en/) – The backbone of the framework. Node Package Manager takes care of installing all the dev dependencies,
 * [Bower](http://bower.io/) – Bower manages all the front end packages and fetches them for, when we start a new project.
@@ -43,7 +43,7 @@ So you got the prerequisites installed, and you're ready to get started? Great! 
 
 ## How to create a new component
 1. Navigate to the `styleguide/components` folder
-2. Create a new twig file: `component-name.twig`
+2. Create a new twig file: `component_name.twig`
 3. Open file `data/global.json`, find array `list_components` then add this code into it
 
     ```
@@ -55,5 +55,15 @@ So you got the prerequisites installed, and you're ready to get started? Great! 
         "hidecode":true // Hide showcode button. (option)
       }
    ```
+
+_Note*_
+
+
+    id: ID of taks on jira. (option)
+    name: Same as file name. *require
+    title: Set title display for component. (option)
+    group: Group of component: basic/helper/component. *require
+    hidecode: Hide showcode button. (option)
+
 
 Make sure `gulp` is runing.
