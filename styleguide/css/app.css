@@ -300,3 +300,8 @@
   top: -5px;
   position: relative;
 }
+
+.container {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+}
