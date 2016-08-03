@@ -4,6 +4,8 @@
 var gulp = require('gulp'),
   autoprefixer = require('gulp-autoprefixer'),
   browserSync = require('browser-sync'),
+  inlineCss = require('gulp-inline-css'),
+  rename = require("gulp-rename"),
   filter = require('gulp-filter'),
   twig = require('gulp-twig'),
   sass = require('gulp-sass'),
@@ -25,7 +27,7 @@ var gulp = require('gulp'),
   };
 
 // Task for local, static development.
-gulp.task('local-development', ['sass-dev', 'styleguide'], function () {
+gulp.task('local-development', ['sass-dev', 'styleguide', 'inline-css'], function () {
   browserSync({
     server: {
       baseDir: ["../styleguide", "../"]
@@ -37,6 +39,7 @@ gulp.task('local-development', ['sass-dev', 'styleguide'], function () {
   gulp.watch([src.html_components, src.html_layouts, src.html_pages], ['styleguide']);
   gulp.watch(src.javascript, reload);
   gulp.watch(src.dataJson, ['styleguide', reload]);
+  gulp.watch(src.dataJson, ['inline-css', reload]);
 });
 
 
@@ -116,6 +119,14 @@ gulp.task('js-lint', function () {
     .pipe(jshint.reporter('default'));
 });
 
+gulp.task('inline-css', function() {
+  return gulp.src('../styleguide/sg-inline.html')
+    .pipe(inlineCss({
+      url: 'file://' + __dirname + '/../styles.css'
+    }))
+    .pipe(rename('sg-inline-embed.html'))
+    .pipe(gulp.dest('../styleguide/'));
+});
 
 // Gulp Task for development mode.
 // SASS compile, template generation, SCSS/JS linter
