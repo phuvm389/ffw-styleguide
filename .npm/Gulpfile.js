@@ -133,5 +133,5 @@ gulp.task('dev', ['sass-dev', 'styleguide', 'scss-lint', 'js-lint'], function ()
   gulp.watch(src.dataJson, ['styleguide', reload]);
 });
 
-// CIBOX.
-gulp.task('default', ['local-development']);
+// Default task.
+gulp.task('default', ['dev']);
