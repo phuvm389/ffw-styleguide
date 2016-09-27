@@ -28,7 +28,7 @@ var gulp = require('gulp'),
 gulp.task('local-development', ['sass-dev', 'styleguide'], function () {
   browserSync({
     server: {
-      baseDir: ["../styleguide", "../"]
+      baseDir: "../"
     },
     files: ["css/styles.css", src.html]
   });
@@ -122,7 +122,7 @@ gulp.task('js-lint', function () {
 gulp.task('dev', ['sass-dev', 'styleguide', 'scss-lint', 'js-lint'], function () {
   browserSync({
     server: {
-      baseDir: ["../styleguide", "../"]
+      baseDir: "../"
     },
     files: ["../css/styles.css", src.html]
   });
